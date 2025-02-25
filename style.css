@@ -67,3 +67,14 @@ table tr:last-child td {
   border-bottom: none;
 }
 
+/* ESTILOS MOBILE */
+
+/* Celulares */
+@media (max-width: 600px) {
+  .tablaDatos{
+    margin: 20px auto;
+  }
+
+}
+
+
