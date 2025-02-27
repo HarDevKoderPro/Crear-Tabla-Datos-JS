@@ -3,24 +3,25 @@ export class Libreria {
   //-------------------------------------------------------
   // TABLA PARA MOSTRAR DATOS
   //-------------------------------------------------------
-  static crearTablaDatos(id, padre, tituloTabla, campos, datos) {
+  // Recibe un Objeto con los Parámetros
+  static crearTablaDatos(params) {
     // Creo el elemento principal (Tabla)
     const tabla = document.createElement("table");
-    tabla.id = id;
-    tabla.className = id;
+    tabla.id = params.id;
+    tabla.className = params.id;
 
     // Titulo de la tabla
     const titulo = document.createElement("caption");
     titulo.className = "tituloTabla";
-    titulo.textContent = tituloTabla;
+    titulo.textContent = params.tituloTabla;
     tabla.appendChild(titulo);
 
     // Encabezados de la tabla (Campos)
     const encabezado = document.createElement("thead");
     const encabezadoFila = document.createElement("tr");
-    campos.forEach((campo, index) => {
+    params.campos.forEach((campo) => {
       encabezadoFila.innerHTML += `
-      <th class = "tablaCampos"> ${campos[index]}</th>`;
+      <th class = "tablaCampos"> ${campo}</th>`;
     });
     encabezado.appendChild(encabezadoFila);
     tabla.appendChild(encabezado);
@@ -29,7 +30,7 @@ export class Libreria {
     const cuerpo = document.createElement("tbody");
     cuerpo.id = "tablaResultados";
     cuerpo.className = "tablaResultados";
-    datos.forEach((dato, index) => {
+    params.datos.forEach((dato) => {
       const fila = document.createElement("tr");
       fila.innerHTML += `
         <td>${dato.id}</td>
@@ -42,6 +43,6 @@ export class Libreria {
     tabla.appendChild(cuerpo);
 
     // Agrego la tabla al contenedor padre y la retorno
-    document.querySelector(padre).appendChild(tabla);
+    document.querySelector(params.padre).appendChild(tabla);
   }
 }
