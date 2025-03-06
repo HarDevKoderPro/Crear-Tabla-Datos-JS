@@ -13,13 +13,13 @@ html {
 }
 
 /* Configuracion del Body */
-body{
-    background:azure;
-    font-size: 100%;
+body {
+  background: azure;
+  font-size: 100%;
 }
 
 /* Asegura que la tabla tenga un borde general */
-.tablaDatos{
+.tablaDatos {
   border: 1px solid gray;
   width: fit-content;
   margin-left: 20px;
@@ -41,7 +41,7 @@ body{
 .tablaCampos {
   font-size: 0.8em;
   padding: 5px 15px;
-  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   background: #eee3e3;
   color: rgb(12, 12, 12);
   box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.3), 3px 0px 3px rgba(0, 0, 0, 0.3);
@@ -71,10 +71,7 @@ table tr:last-child td {
 
 /* Celulares */
 @media (max-width: 600px) {
-  .tablaDatos{
+  .tablaDatos {
     margin: 20px auto;
   }
-
 }
-
-
